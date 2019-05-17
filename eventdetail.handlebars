@@ -1,0 +1,36 @@
+<main class="bg">
+
+    <div>
+        {{#if err}}
+        {{err}}
+        {{/if}}
+        <h1>Event name: {{data.EventName}}</h1>
+        <h1>Description: {{data.Description}}</h1>
+        <h1>Location: {{data.Location}}</h1>
+        <h1>Category: {{data.Category}}</h1>
+        <h1>Date of Event: {{data.DateofEvent}}</h1>
+        <!--<h1><a href="http://www.google.com">{{this.EventName}}</a></h1>-->
+
+        <h1>Comments</h1>
+        {{#each data.comment}}
+        <h2>User: {{this.UserName}}</h2>
+        <h2>Comment: {{this.Text}}</h2>
+        {{/each}}
+
+        <form method='post', action='/eventdetail',enctype='multipart/form-data'>
+        
+        <label for="fname"> Add a comment  </label> 
+        <input type="textbox" name="comment" id="comment" placeholder='Enter Your comment'><br>
+
+        <input type="submit" value="Submit" />
+
+        </form>
+        
+    </div>
+
+    <footer>    
+        <hr>
+            <p class="footerp"><span>EventCamp</span></p>
+    </footer>
+
+</main>

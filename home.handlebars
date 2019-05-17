@@ -1,0 +1,20 @@
+<main class="bg">
+
+    <div>
+        {{#if err}}
+        {{err}}
+        {{/if}}
+        {{#each data}}
+        <h1><a href="/people/{{this._id}}">{{this.EventName}}</a></h1>
+        <!--<h1><a href="http://www.google.com">{{this.EventName}}</a></h1>-->
+        <h4><p>Date: {{this.DateofEvent}}</p></h4>
+        {{/each}}
+        
+    </div>
+
+    <footer>    
+        <hr>
+            <p class="footerp"><span>EventCamp</span></p>
+    </footer>
+
+</main>

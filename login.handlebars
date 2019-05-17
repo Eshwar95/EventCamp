@@ -1,0 +1,21 @@
+<main>
+    <h2>Login</h2>
+    <p>Please log in using the form below</p>
+    {{#if err}}
+    {{#each err}}
+    {{err}}
+    {{/each}}
+    {{/if}}
+
+    <form method='post', action='/login',enctype='multipart/form-data'> 
+        <label for="fname"> User Name  </label> 
+        <input type="textbox" name="uname" id="uname" placeholder='Enter User Name'><br>
+
+        <label for="password"> Password  </label> 
+        <input type="textbox" name="password" id="passsword" placeholder='Enter Password'><br>
+
+        <input type="submit" value="Log In" />
+
+    </form>
+
+</main> 
